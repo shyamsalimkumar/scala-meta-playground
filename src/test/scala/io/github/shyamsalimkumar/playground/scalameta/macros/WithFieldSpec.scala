@@ -76,11 +76,13 @@ class WithFieldSpec extends FlatSpec with Matchers {
         object Fields {
           def time = 1
         }
+        def dummyMethod = "add"
       }
 
       assert(A.Fields.firstField == "first")
       assert(A.Fields.b == "bad_name")
       assert(A.Fields.time == 1)
+      assert(A.dummyMethod == "add")
     }
   }
 

@@ -41,10 +41,11 @@ class TableSpec extends FlatSpec with Matchers {
       class A(a: String, b: Int)
 
       object A {
-        def time = System.currentTimeMillis()
+        def dummyMethod = "asd"
       }
 
       assert(A.tableName == "fake_table")
+      assert(A.dummyMethod == "asd")
     }
 
     {
